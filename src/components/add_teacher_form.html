@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Add Teacher</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="inName">Name</label>
+            <input type="text" id="inName" name="name" required>
+        </div>
+        <div>
+            <label for="inGender">Gender</label>
+            <select id="inGender" name="gender" required>
+                <option value="nb">Prefer not to say</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div>
+            <label for="inBirthdate">Date of Birth</label>
+            <input type="date" id="inBirthdate" name="birthdate" required/>
+        </div>
+        <div>
+            <label for="inEmail">Email</label>
+            <input type="email" id="inEmail" name="email" required/>
+        </div>
+        <div>
+            <label for="inPhone">Phone</label>
+            <input type="tel" id="inPhone" name="phone" required/>
+        </div>
+        <div>
+            <label for="inBgColor">Background color</label>
+            <input type="color" id="inBgColor" name="bgColor" required/>
+        </div>
+        <div>
+            <label for="inCountry">Country</label>
+            <input type="text" id="inCountry" name="country" required/>
+        </div>
+        <div>
+            <label for="inCity">City</label>
+            <input type="text" id="inCity" name="city" required/>
+        </div>
+        <div>
+            <label for="inComment">Notes (optional)</label>
+            <textarea rows="4" cols="20" id="inComment" name="comment"></textarea>
+        </div>
+        <button type="submit">Add</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>
