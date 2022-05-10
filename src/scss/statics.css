@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.stats-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+.stats-table__header {
+  border-bottom: 1px #222 solid;
+}
+.stats-table__header:hover {
+  box-sizing: border-box;
+  border-bottom: 5px #222 solid;
+  cursor: pointer;
+}
+.stats-table__header:hover::after {
+  content: "↓";
+  margin-left: 1em;
+  color: #62a7ca;
+}
+.stats-table th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.stats-table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.stats-table tr:nth-child(even) {
+  background-color: #f9f5f9;
+}
+
+/*# sourceMappingURL=statics.css.map */

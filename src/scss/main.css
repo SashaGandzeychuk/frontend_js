@@ -1,0 +1,140 @@
+@charset "UTF-8";
+.main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "nav" "top-teachers" "statistics" "favorites" "footer";
+  grid-row-gap: 40px;
+}
+
+.separator {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.separator hr {
+  width: 70%;
+  height: 1px;
+  border-color: #222;
+  margin: 0;
+}
+
+.v-separator {
+  border-left: 2px dotted rgb(153, 153, 153);
+}
+
+.teachers-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+}
+
+.teachers__filters-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.favorite-teachers {
+  justify-content: center;
+}
+.favorite-teachers:before {
+  content: "〈";
+  position: relative;
+  left: -75px;
+  font-size: 100px;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .favorite-teachers:before {
+    display: none;
+  }
+}
+.favorite-teachers:after {
+  content: "〉";
+  position: relative;
+  left: 75px;
+  font-size: 100px;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .favorite-teachers:after {
+    display: none;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.navbar__links {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+}
+.navbar__element {
+  color: #f75c49;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline: none;
+}
+.navbar__element:hover {
+  color: #cc4836;
+  cursor: pointer;
+}
+.navbar__btn {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title {
+  font-size: 24px;
+}
+.header__search-bar {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+.header__search-bar__search-input {
+  padding: 15px 23px;
+}
+
+.footer__text {
+  text-align: start;
+  font-family: "PT Sans";
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 14px;
+}
+
+.paging {
+  text-align: left;
+  margin-top: 36px;
+}
+.paging__button {
+  color: #1a9cb0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.paging__button:hover {
+  text-decoration: #1096d0 underline;
+  cursor: pointer;
+  color: #1096d0;
+}
+
+/*# sourceMappingURL=main.css.map */

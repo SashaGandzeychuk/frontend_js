@@ -1,0 +1,44 @@
+@use 'modal_styles';
+@use 'forms';
+@use 'teacher_info';
+@use 'statistics';
+@use 'consts';
+
+:root {
+  //margin-left: 300px;
+  //margin-right: 300px;
+  padding: 40px 100px 51px;
+  font-family: 'PT Sans', serif;
+}
+
+.btn {
+  border: 1px consts.$main-color solid;
+  color: consts.$main-color;
+  background-color: consts.$accent-color;
+  font-size: consts.$base-font-size;
+  font-weight: consts.$title-font-weight;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  vertical-align: center;
+
+  &:hover {
+    color: consts.$accent-color;
+    background-color: consts.$main-color;
+    cursor: pointer;
+  }
+}
+
+.small-btn {
+  font-size: 14px;
+  padding: 10px 23px;
+}
+
+.title {
+  font-size: consts.$title-font-size;
+  font-weight: consts.$title-font-weight;
+  font-family: consts.$title-font, serif;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+  margin-top: 40px;
+}

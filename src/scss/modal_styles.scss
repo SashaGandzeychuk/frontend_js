@@ -1,0 +1,164 @@
+@import 'consts';
+
+.modal_overlay {
+  // вкрав з W3Schools
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__box {
+  width: 75%;
+  //height: 100%;
+  //margin: 15% auto;
+}
+
+.modal {
+  border-radius: 2px;
+  z-index: 10;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  background-color: white;
+  margin: 10% auto 10% auto;
+}
+
+.modal__header {
+  background-color: #464547;
+  margin: 0;
+  font-size: 18px;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal__title {
+  color: white;
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  padding: 1em;
+}
+
+.modal__close {
+  cursor: pointer;
+  height: 100%;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  font-size: inherit;
+  padding: 0.5em;
+  color: white;
+  vertical-align: center;
+  float: right;
+}
+
+.modal__content {
+  padding: 1em;
+}
+
+.add-teacher-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 12px;
+  grid-template-rows: repeat(8, 1fr);
+  align-items: center;
+  margin: 0;
+  height: 25%;
+
+  @media only screen and (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+}
+
+.teacher-full-info {
+  padding: 1em;
+
+  &__name {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-align: left;
+    margin-left: calc(320px + 44px);
+  }
+
+  &__specialty {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: $title-font-weight;
+    text-align: left;
+    margin-left: calc(320px + 44px);
+  }
+
+  &__avatar {
+    width: 320px;
+    height: 320px;
+    float: left;
+    margin-bottom: 32px;
+  }
+
+  &__info {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 11px;
+    color: #888897;
+    text-align: left;
+    margin-left: calc(320px + 44px);
+  }
+
+  &__email {
+    color: #1a9cb0;
+    text-decoration: none;
+    text-align: left;
+    margin-left: calc(320px + 44px);
+    display: block;
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    &:hover {
+      text-decoration: #1096d0 underline;
+      cursor: pointer;
+      color: #1096d0;
+    }
+  }
+
+  &__desc {
+    clear: both;
+    text-align: start;
+    font-family: $base-font;
+    font-size: 12px;
+    font-weight: $base-font-weight;
+    margin-bottom: 16px;
+  }
+
+  &__map-btn {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #7cb1c8;
+    text-decoration: #7cb1c8 underline dashed;
+    text-align: start;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+      color: #1096d0;
+    }
+  }
+}

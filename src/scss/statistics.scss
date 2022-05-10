@@ -1,0 +1,39 @@
+@import 'consts';
+
+$table-border-color: #222;
+
+.stats-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+
+  &__header {
+    border-bottom: 1px $table-border-color solid;
+
+    &:hover {
+      box-sizing: border-box;
+      border-bottom: 5px $table-border-color solid;
+      cursor: pointer;
+
+      &::after {
+        content: '↓';
+        margin-left: 1em;
+        color: #62a7ca;
+      }
+    }
+  }
+
+  & th {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  & td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  & tr:nth-child(even) {
+    background-color: #f9f5f9;
+  }
+}

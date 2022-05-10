@@ -1,0 +1,81 @@
+@charset "UTF-8";
+.teacher-compact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  row-gap: 10px;
+}
+.teacher-compact-info__name {
+  font-size: inherit;
+  font-weight: 600;
+}
+.teacher-compact-info__nationality {
+  font-size: 8px;
+}
+.teacher-compact-info__specialty {
+  font-size: 11px;
+  color: #888897;
+}
+
+.teacher-avatar {
+  border: 3px #f75c49 solid;
+  border-radius: 100%;
+  padding: 0;
+  width: 7em;
+  height: 7em;
+  font-size: inherit;
+  transition: 0.25s;
+  margin: 8px;
+  overflow: hidden;
+}
+.teacher-avatar:hover {
+  border-color: #cc4836;
+  cursor: pointer;
+}
+.teacher-avatar__img {
+  transition: 0.5s ease-in-out;
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: inherit;
+  padding: 0;
+  overflow: auto;
+}
+.teacher-avatar__img:hover {
+  transform: scale(1.25);
+  transform-origin: 50%;
+}
+.teacher-avatar__placeholder {
+  font-weight: 600;
+  color: #f75c49;
+  font-size: 24px;
+  font-family: "Source Sans Pro", serif;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  border-radius: inherit;
+  vertical-align: middle;
+}
+.teacher-avatar__placeholder:hover {
+  transform: scale(1.25);
+  transform-origin: 50%;
+  color: #cc4836;
+}
+
+.favorite-teacher-star {
+  position: relative;
+}
+.favorite-teacher-star:after {
+  position: absolute;
+  left: 75px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  content: "★";
+  color: yellow;
+  font-size: 32px;
+}
+
+/*# sourceMappingURL=teacher_info.css.map */

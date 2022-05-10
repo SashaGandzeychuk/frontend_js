@@ -1,0 +1,30 @@
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inline-fieldset {
+  flex-direction: row;
+}
+
+.label {
+  color: rgb(91, 91, 91);
+  align-self: start;
+}
+.label:hover {
+  color: rgb(34, 34, 34);
+}
+.label__centered {
+  align-self: center;
+}
+
+.thin-input {
+  padding: 5px;
+}
+
+.text-input {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=forms.css.map */

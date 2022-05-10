@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head itemscope itemtype="http://schema.org/WebSite">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Teachinder</title>
+
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./scss/main.css">
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="main">
+    <header style="grid-area: header" class="header">
+        <p class="header__title">Teachinder</p>
+        <div class="header__search-bar">
+            <form>
+                <input type="text" placeholder="Name, note or age to search" class="text-input"/>
+                <button class="btn small-btn">Search</button>
+            </form>
+        </div>
+    </header>
+    <nav class="navbar" style="grid-area: nav">
+        <div class="navbar__links">
+            <a class="navbar__element" href="#teachers">Teachers</a>
+            <a class="navbar__element" href="#statistics">Statistics</a>
+            <a class="navbar__element" href="#favorites">Favorites</a>
+            <a class="navbar__element" href="#about">About</a>
+        </div>
+        <button class="btn navbar__btn" id="addTeacherBtn">Add Teacher</button>
+    </nav>
+    <section style="grid-area: top-teachers" id="teachers">
+        <div class="separator">
+            <hr/>
+        </div>
+        <h3 class="title">Top Teachers</h3>
+        <div class="teachers__filters-row">
+            <div class="fieldset inline-fieldset">
+                <label for="inAgeFilter" class="label label__centered">Age</label>
+                <select id="inAgeFilter" class="thin-input">
+                    <option>Any</option>
+                    <option>18-31</option>
+                    <option>32-50</option>
+                    <option>50-80</option>
+                </select>
+            </div>
+            <div class="v-separator"></div>
+            <div class="fieldset inline-fieldset">
+                <label for="inRegionFilter" class="label label__centered">Region</label>
+                <select id="inRegionFilter" class="thin-input">
+                    <option>Any</option>
+                    <option>Europe</option>
+                    <option>Asia</option>
+                    <option>Middle East</option>
+                    <option>Africa</option>
+                    <option>North America</option>
+                    <option>South America</option>
+                    <option>Australia</option>
+                </select>
+            </div>
+            <div class="v-separator"></div>
+            <div class="fieldset inline-fieldset">
+                <label for="inSexFilter" class="label label__centered">Sex</label>
+                <select id="inSexFilter" class="thin-input">
+                    <option>Any</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <div class="v-separator"></div>
+            <div class="fieldset inline-fieldset">
+                <input type="checkbox" id="inWithPhotoFilter" style="align-self: center">
+                <label for="inWithPhotoFilter" class="label label__centered">Only with photo</label>
+            </div>
+            <div class="v-separator"></div>
+            <div class="fieldset inline-fieldset">
+                <input type="checkbox" id="inOnlyFavoritesFilter" style="align-self: center">
+                <label for="inOnlyFavoritesFilter" class="label label__centered">Only favorites</label>
+            </div>
+        </div>
+        <div class="teachers-list" id="teachers-list">
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">test</p>
+                <p class="teacher-compact-info__specialty">test</p>
+                <p class="teacher-compact-info__nationality">test</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">test</p>
+                <p class="teacher-compact-info__specialty">test</p>
+                <p class="teacher-compact-info__nationality">test</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">test</p>
+                <p class="teacher-compact-info__specialty">test</p>
+                <p class="teacher-compact-info__nationality">test</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">test</p>
+                <p class="teacher-compact-info__specialty">test</p>
+                <p class="teacher-compact-info__nationality">test</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">test</p>
+                <p class="teacher-compact-info__specialty">test</p>
+                <p class="teacher-compact-info__nationality">test</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">test</p>
+                <p class="teacher-compact-info__specialty">test</p>
+                <p class="teacher-compact-info__nationality">test</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">test</p>
+                <p class="teacher-compact-info__specialty">test</p>
+                <p class="teacher-compact-info__nationality">test</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <h3 class="teacher-avatar__placeholder">test0</h3>
+                </div>
+                <p class="teacher-compact-info__name">test</p>
+                <p class="teacher-compact-info__specialty">test</p>
+                <p class="teacher-compact-info__nationality">test</p>
+            </div>
+        </div>
+    </section>
+    <section style="grid-area: statistics" id="statistics">
+        <div class="separator">
+            <hr/>
+        </div>
+        <h3 class="title">Statistics</h3>
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th class="stats-table__header" id="nameRowHeader">Name</th>
+                    <th class="stats-table__header" id="ageRowHeader">Age</th>
+                    <th class="stats-table__header" id="genderRowHeader">Gender</th>
+                    <th class="stats-table__header" id="nationalityRowHeader">Nationality</th>
+                </tr>
+            </thead>
+            <tbody id="statsTableBody">
+                <tr>
+                    <td>Abc Def</td>
+                    <td>29</td>
+                    <td>Male</td>
+                    <td>Ukraine</td>
+                </tr>
+                <tr>
+                    <td>Someone</td>
+                    <td>23</td>
+                    <td>Female</td>
+                    <td>Italy</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="paging" id="pagingRow">
+            <span class="paging__button">1</span>
+            <span class="paging__button">2</span>
+            <span class="paging__button">3</span>
+            <span>...</span>
+            <span class="paging__button">Last</span>
+        </div>
+    </section>
+    <section style="grid-area: favorites" id="favorites">
+        <div class="separator">
+            <hr/>
+        </div>
+        <h3 class="title">Favorites</h3>
+        <div class="teachers-list favorite-teachers">
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">Name</p>
+                <p class="teacher-compact-info__specialty">Specialty</p>
+                <p class="teacher-compact-info__nationality">Nationality</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">Name</p>
+                <p class="teacher-compact-info__specialty">Specialty</p>
+                <p class="teacher-compact-info__nationality">Nationality</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">Name</p>
+                <p class="teacher-compact-info__specialty">Specialty</p>
+                <p class="teacher-compact-info__nationality">Nationality</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">Name</p>
+                <p class="teacher-compact-info__specialty">Specialty</p>
+                <p class="teacher-compact-info__nationality">Nationality</p>
+            </div>
+            <div class="teacher-compact-info">
+                <div class="teacher-avatar">
+                    <img class="teacher-avatar__img"
+                         src="./images/avatar.jpg"
+                         alt="Teacher photo"/>
+                </div>
+                <p class="teacher-compact-info__name">Name</p>
+                <p class="teacher-compact-info__specialty">Specialty</p>
+                <p class="teacher-compact-info__nationality">Nationality</p>
+            </div>
+        </div>
+    </section>
+    <footer style="grid-area: footer" id="about">
+        <div class="separator">
+            <hr/>
+        </div>
+        <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque facere, hic impedit
+            itaque molestiae sit tempore? Ea in mollitia natus rerum voluptates. Ea ex excepturi facere tempora. Aliquid
+            asperiores hic impedit iusto natus quaeret ratione sit? Culpa iusto optio voluptas voluptate. Enim eveniet
+            fugit iure maiores molestiae, praesentium quia.</p>
+        <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi illum in
+            inventore ipsum odio
+            officiis omnis quisquam sed tempora?</p>
+        <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque esse expedita id iusto
+            mollitia, odit sint ullam veritatis vero?</p>
+        <nav class="navbar">
+            <div class="navbar__links">
+                <a class="navbar__element" href="#teachers">Teachers</a>
+                <a class="navbar__element" href="#statistics">Statistics</a>
+                <a class="navbar__element" href="#favorites">Favorites</a>
+                <a class="navbar__element" href="#about">About</a>
+            </div>
+            <button class="btn navbar__btn">Add Teacher</button>
+        </nav>
+    </footer>
+    <div class="modal_overlay" id="modalOverlay">
+        <div class="modal__wrapper">
+            <div class="modal__box" id="modalBox"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../build/app.js"></script>
+</body>
+</html>

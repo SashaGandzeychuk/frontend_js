@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../scss/style.css"/>
+
+    <title>Add Teacher</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal__header">
+            <p class="modal__title">Add Teacher</p>
+            <button class="modal__close" style="float: right">X</button>
+        </div>
+        <form class="modal__content add-teacher-form">
+            <div class="fieldset" style="grid-column: 1 / span 2">
+                <label for="inName" class="label">Name</label>
+                <input type="text" id="inName" name="name" required>
+            </div>
+            <div class="fieldset">
+                <label for="inCountry" class="label">Country</label>
+                <input type="text" id="inCountry" name="country" required/>
+            </div>
+            <div class="fieldset">
+                <label for="inCity" class="label">City</label>
+                <input type="text" id="inCity" name="city" required/>
+            </div>
+            <div class="fieldset">
+                <label for="inEmail" class="label">Email</label>
+                <input type="email" id="inEmail" name="email" required/>
+            </div>
+            <div class="fieldset">
+                <label for="inPhone" class="label">Phone</label>
+                <input type="tel" id="inPhone" name="phone" required/>
+            </div>
+            <div class="fieldset" style="grid-column: 1 / span 2">
+                <label for="inBirthdate" class="label">Date of Birth</label>
+                <input type="date" id="inBirthdate" name="birthdate" required/>
+            </div>
+            <div class="fieldset inline-fieldset" style="grid-column: 1 / span 2">
+                <label for="inSex" class="label">Sex</label>
+                <div id="inSex">
+                    <label for="inGender__Male">Male</label>
+                    <input id="inGender__Male" type="radio" value="male" name="gender"/>
+                    <label for="inGender__Female">Female</label>
+                    <input id="inGender__Female" type="radio" value="female" name="gender"/>
+                    <label for="inGender__NB">Prefer not to say</label>
+                    <input id="inGender__NB" type="radio" value="nb" name="gender" checked/>
+                </div>
+            </div>
+            <div class="fieldset inline-fieldset" style="grid-column: 1 / span 2">
+                <label for="inBgColor" class="label">Background color</label>
+                <input type="color" id="inBgColor" name="bgColor" required/>
+            </div>
+            <div class="fieldset" style="grid-column: 1 / span 2">
+                <label for="inComment" class="label">Notes (optional)</label>
+                <textarea rows="4" cols="20" id="inComment" name="comment"></textarea>
+            </div>
+            <button type="submit" class="btn" style="grid-column: 1 / span 2; align-self: end">Add</button>
+        </form>
+    </div>
+</body>
+</html>

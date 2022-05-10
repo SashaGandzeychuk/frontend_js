@@ -1,0 +1,158 @@
+@use 'consts';
+
+.main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "top-teachers"
+    "statistics"
+    "favorites"
+    "footer";
+  //padding: 40px 100px 51px;
+  grid-row-gap: 40px;
+}
+
+.separator {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & hr {
+    width: 70%;
+    height: 1px;
+    border-color: #222;
+    margin: 0;
+  }
+}
+
+.v-separator {
+  border-left: 2px dotted rgb(153, 153, 153);
+}
+
+.teachers-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+}
+
+.teachers__filters-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.favorite-teachers {
+  justify-content: center;
+
+  &:before {
+    content: '〈';
+    position: relative;
+    left: -75px;
+    font-size: 100px;
+    cursor: pointer;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: '〉';
+    position: relative;
+    left: 75px;
+    font-size: 100px;
+    cursor: pointer;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+  }
+
+  &__element {
+    color: consts.$main-color;
+    font-size: consts.$base-font-size;
+    font-weight: consts.$title-font-weight;
+    text-decoration: none;
+    text-underline: none;
+
+    &:hover {
+      color: consts.$hover-color;
+      cursor: pointer;
+    }
+  }
+
+  &__btn {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__search-bar {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+    &__search-input {
+      padding: 15px 23px;
+    }
+  }
+}
+
+.footer {
+  &__text {
+    text-align: start;
+    font-family: consts.$base-font;
+    font-size: 12px;
+    font-weight: consts.$base-font-weight;
+    margin-top: 14px;
+  }
+}
+
+.paging {
+  text-align: left;
+  margin-top: 36px;
+
+  &__button {
+    color: #1a9cb0;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    &:hover {
+      text-decoration: #1096d0 underline;
+      cursor: pointer;
+      color: #1096d0;
+    }
+  }
+}
