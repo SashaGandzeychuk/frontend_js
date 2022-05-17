@@ -1,0 +1,247 @@
+@use "theming/theme";
+
+.main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "top-teachers"
+    "statistics"
+    "favorites"
+    "footer";
+  grid-row-gap: 40px;
+}
+
+.separator {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & hr {
+    width: min(500px, 70%);
+    height: 1px;
+    border-color: #222;
+    margin: 0;
+  }
+}
+
+.v-separator {
+  border-left: 2px dotted rgb(153 153 153);
+}
+
+.teachers-list {
+  display: flex;
+  column-gap: 50px;
+  row-gap: 40px;
+  flex-flow: row wrap;
+  height: auto;
+  width: auto;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.teachers {
+  &__filters-row {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 60px;
+    gap: 20px;
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+}
+
+.favorite-teachers-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.favorite-teachers {
+  justify-content: center;
+  flex-grow: 4;
+  flex-wrap: wrap;
+
+  &__prev {
+    background: rgba(0 0 0 / 0%);
+    border: 0;
+    position: relative;
+    left: -75px;
+    font-size: 100px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 50px;
+      left: 0;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__next {
+    background: rgba(0 0 0 / 0%);
+    border: 0;
+    position: relative;
+    left: 75px;
+    font-size: 100px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 50px;
+      left: 0;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__mobile-buttons-panel {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  &__element {
+    color: theme.$main-color;
+    font-family: theme.$title-font;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-underline: none;
+
+    &:hover {
+      color: theme.$hover-color;
+      cursor: pointer;
+    }
+  }
+
+  &__btn {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  &__title {
+    font-size: 38px;
+    color: #fafafa;
+    text-shadow:
+      theme.$main-color -1px -1px 2px,
+      black 1px 1px 2px;
+    font-family: "Times New Roman" theme.$title-font;
+    font-stretch: extra-expanded;
+
+    &:hover {
+      color: #eee;
+      text-shadow:
+        theme.$main-color -3px -1px 2px,
+        black 3px 1px 2px;
+    }
+  }
+
+  &__search-bar {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 20px;
+
+    &__search-input {
+      width: 16em;
+      transition: 0.5s;
+
+      &:hover,
+      &:focus {
+        width: 27em;
+        transition: 0.5s;
+
+        @media screen and (max-width: 768px) {
+          width: 16em;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  &__text {
+    text-align: left;
+    font-family: theme.$base-font;
+    font-size: 12px;
+    font-weight: theme.$base-font-weight;
+    margin-top: 14px;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.paging {
+  text-align: left;
+  margin-top: 36px;
+
+  &__button {
+    color: theme.$paging-button-color;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    &:hover {
+      text-decoration: #1096d0 underline;
+      cursor: pointer;
+      color: #1096d0;
+    }
+
+    &__selected {
+      color: theme.$current-page-button-color;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}

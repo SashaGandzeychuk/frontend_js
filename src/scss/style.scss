@@ -1,0 +1,49 @@
+@use "modal_styles";
+@use "forms";
+@use "teacher_info";
+@use "statistics";
+@use "theming/theme";
+
+:root {
+  padding: 40px 100px 51px;
+  font-family: "PT Sans", serif;
+
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+}
+
+.btn {
+  border: 1px theme.$main-color solid;
+  color: theme.$main-color;
+  background-color: theme.$accent-color;
+  font-size: theme.$base-font-size;
+  font-weight: theme.$title-font-weight;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  vertical-align: middle;
+
+  &:hover {
+    color: theme.$accent-color;
+    background-color: theme.$main-color;
+    cursor: pointer;
+  }
+}
+
+.small-btn {
+  font-size: 14px;
+  padding: 10px 23px;
+}
+
+.title {
+  font-size: theme.$title-font-size;
+  font-weight: theme.$title-font-weight;
+  font-family: theme.$title-font, serif;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+  margin-top: 40px;
+}

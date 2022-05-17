@@ -1,0 +1,34 @@
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inline-fieldset {
+  flex-direction: row;
+
+  &__wide {
+    gap: 40px;
+  }
+}
+
+.label {
+  color: rgb(119 119 119);
+  align-self: start;
+
+  &:hover {
+    color: rgb(34 34 34);
+  }
+
+  &__centered {
+    align-self: center;
+  }
+}
+
+.thin-input {
+  padding: 5px;
+}
+
+.text-input {
+  padding: 10px;
+}

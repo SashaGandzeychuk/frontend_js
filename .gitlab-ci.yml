@@ -1,0 +1,29 @@
+image: node:12
+stages:
+  - build
+  - lint
+  - pages
+cache:
+  paths:
+    - node_modules/
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+      - build/
+lint:
+  stage: lint
+  script:
+    - npm run lint
+    - npm run stylelint
+pages:
+  stage: pages
+  script:
+    - cp -r ./build ./public
+  artifacts:
+    paths:
+      - public/

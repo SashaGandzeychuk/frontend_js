@@ -1,0 +1,61 @@
+@import "theming/theme";
+
+$table-border-color: #222;
+
+.stats-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+
+  &__header {
+    border-bottom: 1px $table-border-color solid;
+
+    &:hover {
+      box-sizing: border-box;
+      box-shadow: inset 0 -5px $table-border-color;
+      cursor: pointer;
+
+      &::after {
+        content: attr(data-arrow);
+        margin-left: 1em;
+        color: #62a7ca;
+      }
+    }
+  }
+
+  &__name {
+    width: 25%;
+  }
+
+  &__course {
+    width: 25%;
+  }
+
+  &__age {
+    width: 10%;
+  }
+
+  &__gender {
+    width: 15%;
+  }
+
+  &__nationality {
+    width: 25%;
+  }
+
+  & th {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 14px;
+  }
+
+  & td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 11px;
+  }
+
+  & tr:nth-child(even) {
+    background-color: #f9f5f9;
+  }
+}

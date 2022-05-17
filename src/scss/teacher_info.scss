@@ -1,0 +1,92 @@
+@import "theming/theme";
+
+.teacher-compact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $base-font-size;
+  row-gap: 10px;
+
+  &__name {
+    font-size: inherit;
+    font-weight: $title-font-weight;
+  }
+
+  &__nationality {
+    font-size: 8px;
+  }
+
+  &__specialty {
+    font-size: 11px;
+    color: #888897;
+  }
+}
+
+.teacher-avatar {
+  border: 3px $main-color solid;
+  border-radius: 100%;
+  padding: 0;
+  width: 7em;
+  height: 7em;
+  font-size: inherit;
+  transition: 0.25s;
+  margin: 8px;
+  overflow: hidden;
+
+  &:hover {
+    border-color: $hover-color;
+    cursor: pointer;
+  }
+
+  &__img {
+    transition: 0.5s ease-in-out;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: inherit;
+    padding: 0;
+    overflow: auto;
+
+    &:hover {
+      transform: scale(1.25);
+      transform-origin: 50%;
+    }
+  }
+
+  &__placeholder {
+    font-weight: $title-font-weight;
+    color: $main-color;
+    font-size: 24px;
+    font-family: $title-font, serif;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.25);
+      transform-origin: 50%;
+      color: $hover-color;
+    }
+  }
+}
+
+.favorite-teacher-star {
+  position: relative;
+  overflow: visible;
+
+  &::after {
+    position: absolute;
+    left: 90px;
+    right: 0;
+    top: 10px;
+    bottom: 0;
+    content: "★";
+    color: $favorite-color;
+    font-size: 32px;
+  }
+}
